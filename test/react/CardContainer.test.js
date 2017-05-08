@@ -13,10 +13,12 @@ describe('CardContainer Test', () => {
     expect(wrapper.find('.cardsContainer').length).toEqual(1);
   })
 
-  it.skip('renders 181 elements with class name card ', () => {
+  it('renders 181 elements with class name card ', () => {
     const district = new DistrictRepository(kinderData);
     const data = district.data;
-    const wrapper = mount(<CardContainer handleData={{data}} handleCompare={() => {}} handleCompareData={[]}/>)
-    expect(wrapper.find('.card').length).toEqual(1);
+    const wrapper = shallow(<CardContainer handleData={{data}} handleCompare={() => {}} handleCompareData={[]}/>)
+    const cardsContainer = wrapper.find('.cardsContainer').props();
+    console.log(cardsContainer);
+    expect(wrapper.find('.cardsContainer').props().length).toEqual(2);
   })
 })
