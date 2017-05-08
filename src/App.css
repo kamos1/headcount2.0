@@ -1,8 +1,11 @@
 body {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  background: #517fa4;
+  background: -webkit-linear-gradient(to bottom, #517fa4, #243949);
+  background: linear-gradient(to bottom, #517fa4, #243949);
 }
 
 .headline {
@@ -10,41 +13,68 @@ body {
   text-align: center;
 }
 
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px auto;
+}
+
 .input {
-  width: 50%;
+  width: 30%;
   height: 25px;
   padding-left: 5px;
   text-align: center;
 }
 
 .submitButton {
-  width: 25%;
-  height: 25px;
+  width: 15%;
+  height: 30px;
   text-decoration: none;
-  border: 1px solid black;
-  background-color: inherit;
+  border: 2px solid #000000;
+  background-color: #ffffff;
+}
+
+.cardList {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .negative {
-  color: magenta;
+  color: #ff0000;
 }
 
 .positive {
-  color: aqua;
+  color: #4169e1;
+}
+
+li {
+  list-style-type: none;
 }
 
 .card {
-  border: 1px solid black;
-  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  border: 1px solid #000000;
+  width: 400px;
+  height: 350px;
+  background: #ffffff;
 }
 
 .active {
-  background-color: #bdbdbd;
-  -webkit-box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.8)
+  -webkit-box-shadow: 0px 0px 60px 0px rgba(0,0,0,0.9);
+  margin-bottom: 30px;
 }
 
 .compareCards {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .active:nth-of-type(3) {
@@ -57,4 +87,10 @@ body {
 
 .active:nth-of-type(2) {
   order: 3;
+}
+
+.comparedStats {
+  color: #4b0082;
+  font-size: 24px;
+  font-weight: 700;
 }
