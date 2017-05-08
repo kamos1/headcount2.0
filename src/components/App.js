@@ -28,13 +28,6 @@ class App extends Component {
 
   }
 
-  handleSubmit(area) {
-    const county = district.findByName(area);
-    this.setState({
-      district: {county},
-    })
-  }
-
   handleMatches(letters) {
     const matches = district.findAllMatches(letters);
     const found = matches.reduce((acc, key) => {
@@ -67,10 +60,9 @@ class App extends Component {
   createComparison(){
     if (this.state.compare.length === 2) {
       const data = district.compareDistrictAverages(this.state.compare[0].location, this.state.compare[1].location)
-      this.state.compare.push(data)
+      this.state.compare[this.state.compare.length] = data;
       this.setState({compare: this.state.compare})
     }
-
   }
 
   render() {

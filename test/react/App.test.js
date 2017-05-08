@@ -10,18 +10,18 @@ describe('App', () => {
   });
 
   it('has 181 objects in state on load', () => {
-    const wrapper = mount(<App/>);
+    const wrapper = shallow(<App/>);
 
     expect(Object.keys(wrapper.state().district).length).toEqual(181);
   })
 
   it('renders controls component', () => {
-    const wrapper = mount(<App/>);
+    const wrapper = shallow(<App/>);
     expect(wrapper.find('Controls').length).toEqual(1);
   })
 
   it('renders 1 CardContainer component', () => {
-    const wrapper = mount(<App/>);
+    const wrapper = shallow(<App/>);
     expect(wrapper.find('CardContainer').length).toEqual(1);
   })
 
@@ -30,7 +30,7 @@ describe('App', () => {
     expect(wrapper.find('.card').length).toEqual(181);
   })
 
-  it.skip('should update state to 1 object when Aspen 1 is entered', () => {
+  it('should update state to 1 object when Aspen 1 is entered', () => {
     const wrapper = mount(<App/>);
     const input = wrapper.find('.input');
 
@@ -38,7 +38,7 @@ describe('App', () => {
     expect(Object.keys(wrapper.state().district).length).toEqual(1);
   })
 
-  it.skip('should update state to 2 objecs when Colorado is entered', () => {
+  it('should update state to 2 objecs when Colorado is entered', () => {
     const wrapper = mount(<App/>);
     const input = wrapper.find('.input');
 

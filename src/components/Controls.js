@@ -9,13 +9,13 @@ export default class Controls extends Component {
     }
   }
 
-  search() {
-    this.props.handleSearch(this.state.location);
+  search(e) {
+    this.props.handleSearch(e.target.value);
   }
 
   handleOnChange(e) {
     this.setState({location: e.target.value});
-    this.search();
+    this.search(e);
   }
 
   render() {

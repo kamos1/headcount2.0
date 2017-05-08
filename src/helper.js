@@ -13,12 +13,12 @@ export default class DistrictRepository {
         acc[Location].data = {};
       }
         acc[Location].data[TimeFrame] = this.round(Data) || 0;
-      return acc
+      return acc;
     }, {});
   }
 
   findByName(location = '') {
-    return this.data[location.toUpperCase()]
+    return this.data[location.toUpperCase()];
   }
 
   findAllMatches(location){
@@ -45,8 +45,9 @@ export default class DistrictRepository {
 
   compareDistrictAverages(location1, location2) {
     if(!location1 || !location2) {
-      return null
+      return null;
     }
+
     const district1 = this.findAverage(location1);
     const district2 = this.findAverage(location2);
     const divided = district1/district2;
