@@ -18,7 +18,6 @@ describe('CardContainer Test', () => {
     const data = district.data;
     const wrapper = shallow(<CardContainer handleData={{data}} handleCompare={() => {}} handleCompareData={[]}/>)
     const cardsContainer = wrapper.find('.cardsContainer').props();
-    console.log(cardsContainer);
     expect(wrapper.find('.cardsContainer').props().length).toEqual(2);
   })
 })
