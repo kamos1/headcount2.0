@@ -15,7 +15,4 @@ describe('DistrictRepository iteration 1 - part 2', () =>  {
   test('returned object has 181 values', () => {
     expect(Object.keys(district.data).length).toBe(181);
   })
-
-
-
 });
